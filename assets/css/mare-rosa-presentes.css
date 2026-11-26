@@ -1,0 +1,64 @@
+/* Maré Rosa: página da lista de presentes (presentes.html) e janela do Pix. Tokens em mare-rosa.css. */
+
+.gifts-page-header { padding: calc(var(--section-space) + 4rem) var(--gutter) var(--section-space); text-align: center; }
+
+.gifts-page-header h1 { font: 400 clamp(3.5rem, 11vw, 9rem)/.95 var(--font-display); font-variation-settings: 'opsz' 28; letter-spacing: -.02em; }
+
+.gifts-page-header p { max-width: 46ch; margin: 2rem auto 0; color: var(--tide-soft); }
+
+.gifts { padding-block: var(--section-space); background: var(--lilac-wash); }
+
+.gifts__intro { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 4rem; align-items: end; margin-bottom: 3.5rem; }
+
+.gifts__intro p { max-width: 42ch; }
+
+.gifts__status:empty { display: none; }
+
+.gifts__status { margin-bottom: 2rem; text-align: center; color: var(--tide-soft); }
+
+.gifts__list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem 3rem; }
+
+.gift { display: grid; grid-template-rows: auto auto 1fr auto auto; }
+
+/* Passe-partout: filete champanhe afastado da foto, como moldura de galeria. */
+.gift__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin-bottom: 1.75rem;
+  object-fit: cover;
+  background: var(--blush);
+  filter: saturate(.88);
+  outline: 1px solid var(--line);
+  outline-offset: 6px;
+}
+
+.gift__title { font: 400 1.5rem/1.2 var(--font-display); }
+
+.gift__description { margin-top: .5rem; color: var(--tide-soft); font-size: 1rem; }
+
+.gift__price { margin-top: 1.25rem; font: italic 400 1.75rem/1 var(--font-display); }
+
+.gift .text-button { justify-self: start; margin-top: 1rem; padding: .25rem 0; font-weight: 500; }
+
+/* Pix */
+.pix-dialog { background: var(--shell); color: var(--tide); }
+
+.pix-dialog::backdrop { background: rgba(46, 55, 73, .5); backdrop-filter: blur(4px); }
+
+.pix-dialog__image { width: calc(100% + 4rem); max-width: none; margin: -2rem -2rem 1.5rem; aspect-ratio: 16 / 9; object-fit: cover; filter: saturate(.88); }
+
+.pix-dialog__close { border-radius: 50%; background: rgba(251, 243, 241, .92); }
+
+.pix-dialog h2 { font-size: 2rem; padding-right: 2rem; }
+
+.pix-dialog__price { margin: .5rem 0 1.25rem; font: italic 400 1.75rem var(--font-display); }
+
+.pix-dialog__key { margin: 1.25rem 0; padding: 1rem; background: var(--lilac-wash); font-size: .9375rem; }
+
+.pix-dialog__status { margin-top: 1rem; min-height: 1.7em; }
+
+@media (max-width: 56rem) {
+  .gifts__intro { grid-template-columns: 1fr; }
+  .gifts__list { grid-template-columns: 1fr; gap: 3.5rem; }
+  .gift__image { aspect-ratio: 3 / 2; }
+}

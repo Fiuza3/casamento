@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23f4c9ae'/%3E%3C/svg%3E">
+  <title>Lista de presentes, Marcus &amp; Gabriela</title>
+  <meta name="description" content="Lista de presentes do casamento de Marcus e Gabriela, 8 de maio de 2027. Presenteie por Pix.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/mare-rosa.css">
+  <link rel="stylesheet" href="assets/css/mare-rosa-presentes.css">
+  <link rel="stylesheet" href="assets/css/mare-rosa-efeitos.css">
+  <script src="assets/js/wedding-config.js" defer></script>
+  <script src="assets/js/gift-list.js" defer></script>
+  <script src="assets/js/scroll-effects.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body class="is-entered">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="topbar is-solid">
+    <a class="topbar__monogram" href="index.html">M &amp; G</a>
+    <nav aria-label="Seções">
+      <ul>
+        <li><a href="index.html">O convite</a></li>
+        <li><a href="index.html#confirmar">Confirmar presença</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="conteudo" tabindex="-1">
+    <header class="gifts-page-header">
+      <h1 data-reveal>Lista de presentes</h1>
+      <p>Sua presença já é o presente. Se quiser ir além, escolha um presente abaixo; o valor chega para nós por Pix.</p>
+    </header>
+
+    <section class="gifts" aria-label="Presentes">
+      <div class="container">
+        <p class="gifts__status" data-gift-status role="status" aria-live="polite"></p>
+        <ul class="gifts__list" data-gift-list></ul>
+        <template data-gift-template>
+          <li class="gift">
+            <img class="gift__image" data-gift-field="image" alt="" loading="lazy" decoding="async">
+            <h2 class="gift__title" data-gift-field="title"></h2>
+            <p class="gift__description" data-gift-field="description"></p>
+            <p class="gift__price" data-gift-field="price"></p>
+            <button class="text-button" type="button" data-gift-select>Presentear</button>
+          </li>
+        </template>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="parallax-media" src="assets/img/fundo-coqueiros-entardecer.jpg" alt="" loading="lazy" data-parallax="0.15">
+    <div class="footer__content" data-reveal>
+      <div class="crest crest--footer" aria-hidden="true">
+        <span class="crest__letters">M&amp;G</span>
+        <span class="crest__date">08.05.2027</span>
+      </div>
+      <p class="footer__names">Marcus &amp; Gabriela</p>
+      <p>8 de maio de 2027, Casa Lumar, Guarapari</p>
+      <p class="footer__credits">Fotos e som com licença aberta. <a href="CREDITS.md">Ver créditos</a></p>
+    </div>
+  </footer>
+
+  <dialog class="pix-dialog" data-gift-dialog aria-labelledby="pix-titulo">
+    <img class="pix-dialog__image" data-gift-dialog-image alt="">
+    <h2 id="pix-titulo"><span data-gift-dialog-title></span></h2>
+    <p class="pix-dialog__price" data-gift-dialog-price></p>
+    <p>Faça um Pix para a chave abaixo, em nome de <span data-pix-holder></span>.</p>
+    <p class="pix-dialog__key"><code data-pix-key></code></p>
+    <button class="button" type="button" data-copy-pix>Copiar chave Pix</button>
+    <p class="pix-dialog__status" data-copy-status role="status"></p>
+    <button class="pix-dialog__close" type="button" data-dialog-close aria-label="Fechar">×</button>
+  </dialog>
+</body>
+</html>

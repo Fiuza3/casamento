@@ -1,0 +1,68 @@
+/* Maré Rosa: confirmação de presença por lista de convidados. Tokens em mare-rosa.css. */
+
+/* Presença */
+.rsvp { display: grid; grid-template-columns: 1fr 1fr; min-height: 100svh; }
+
+.rsvp__photo { position: relative; overflow: hidden; }
+
+.rsvp__panel { padding: var(--section-space) var(--gutter); max-width: 38rem; }
+
+.rsvp__panel > p { margin: 1rem 0 2.5rem; color: var(--tide-soft); }
+
+/* Aviso de convite individual: moldura champanhe para ser lido antes do formulário. */
+.rsvp__panel > .rsvp__notice { margin: 0 0 2.5rem; padding: 1.1rem 1.25rem; border: 1px solid var(--champagne); color: var(--tide); }
+
+.rsvp__notice strong { display: block; font: italic 400 1.375rem/1.2 var(--font-display); }
+
+/* Busca do nome na lista */
+.field__hint { font-size: .875rem; color: var(--tide-soft); }
+
+.guest-search__options { margin-top: .25rem; border: 1px solid var(--line); background: #fff; }
+
+.guest-search__options li { padding: .8rem 1rem; cursor: pointer; }
+
+.guest-search__options li + li { border-top: 1px solid var(--line); }
+
+.guest-search__options li:hover, .guest-search__options li.is-active { background: var(--lilac-wash); }
+
+.guest-search__status { min-height: 1.5em; font-size: .9375rem; color: var(--tide-soft); }
+
+.guest-search.is-selected input { border-bottom: 2px solid var(--champagne); }
+
+.guest-search.is-selected .guest-search__status { color: var(--tide); }
+
+.field label, .field legend { font-size: .9375rem; color: var(--tide-soft); padding: 0; }
+
+.field input, .field select, .field textarea {
+  padding: .6rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--tide-soft);
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.0625rem;
+}
+
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: none; border-bottom: 2px solid var(--tide); }
+
+.field [aria-invalid="true"] { border-bottom-color: #a4405a; }
+
+.field__error { color: #a4405a; font-size: .9375rem; }
+
+.choice input { position: absolute; opacity: 0; }
+
+.choice span { padding: .6rem 1.25rem; border: 1px solid var(--tide-soft); border-radius: 999px; transition: background .2s, color .2s; }
+
+.choice input:checked + span { background: var(--tide); border-color: var(--tide); color: var(--shell); }
+
+.choice input:focus-visible + span { outline: 2px solid var(--tide); outline-offset: 3px; }
+
+.form-status { margin-top: 1rem; min-height: 1.7em; color: var(--tide-soft); }
+
+.rsvp__success { padding-top: 2rem; }
+
+.rsvp__success h3 { font: italic 400 2.25rem/1.1 var(--font-display); margin-bottom: 1rem; }
+
+@media (max-width: 56rem) {
+  .rsvp { grid-template-columns: 1fr; }
+  .rsvp__photo { height: 45vh; }
+}
