@@ -2,7 +2,7 @@
 
 .gifts-page-header { padding: calc(var(--section-space) + 4rem) var(--gutter) var(--section-space); text-align: center; }
 
-.gifts-page-header h1 { font: 400 clamp(3.5rem, 11vw, 9rem)/.95 var(--font-display); font-variation-settings: 'opsz' 28; letter-spacing: -.02em; }
+.gifts-page-header h1 { font: 400 clamp(3.5rem, 11vw, 9rem)/.95 var(--font-display); letter-spacing: -.02em; }
 
 .gifts-page-header p { max-width: 46ch; margin: 2rem auto 0; color: var(--tide-soft); }
 

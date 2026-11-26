@@ -15,7 +15,7 @@
 
 .band::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(46, 55, 73, .32), rgba(46, 55, 73, .12) 70%); }
 
-.band__text { position: relative; z-index: 1; max-width: 18ch; padding: 0 var(--gutter); font: italic 400 clamp(2.5rem, 7vw, 5.5rem)/1.05 var(--font-display); font-variation-settings: 'opsz' 28; text-shadow: 0 2px 30px rgba(46, 55, 73, .35); }
+.band__text { position: relative; z-index: 1; max-width: 18ch; padding: 0 var(--gutter); font: italic 400 clamp(2.5rem, 7vw, 5.5rem)/1.05 var(--font-display); text-shadow: 0 2px 30px rgba(46, 55, 73, .35); }
 
 /* Capa: foto desce mais devagar que a página; nomes sobem e se apagam. */
 .hero__photo { translate: 0 calc(var(--hero-progress, 0) * 35vh); }
